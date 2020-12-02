@@ -1,0 +1,7 @@
+{
+  "name": "ionicCV",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
