@@ -3,6 +3,7 @@ import {
   IonButton,
   IonContent,
   IonHeader,
+  IonInput,
   IonItem,
   IonLabel,
   IonList,
@@ -11,7 +12,7 @@ import {
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
-import React from 'react';
+import React, { useState } from 'react';
 import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 import html from '../images/html.jpg';
@@ -20,28 +21,43 @@ import js from '../images/js.jpg';
 import react from '../images/react.jpg';
 import ionic from '../images/ionic.jpg';
 
-const Home: React.FC = () => {
+const Login: React.FC = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  function loginUser() {
+    console.log(username, password);
+  }
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonTitle>
             {' '}
-            <h1>Personal Profile</h1>
+            <h1>Login</h1>
           </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <IonButton routerLink='/login' color='warning'>
+        <IonInput
+          placeholder='username'
+          onIonChange={(e: any) => setUsername(e.target.value)}
+        />
+        <IonInput
+          placeholder='password'
+          type='password'
+          onIonChange={(e: any) => setPassword(e.target.value)}
+        />
+        <IonButton onClick={loginUser} color='warning'>
           Login
         </IonButton>
+        <p>Don't have an account yet?</p>
         <IonButton routerLink='/register' color='tertiary'>
           Register
         </IonButton>
-        <IonButton routerLink='/skills'>Skills</IonButton>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Home;
+export default Login;

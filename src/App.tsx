@@ -3,6 +3,8 @@ import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
 import TechSkills from './pages/TechSkills';
 
 /* Core CSS required for Ionic components to work properly */
@@ -31,6 +33,8 @@ const App: React.FC = () => (
         {/* Personal Profile, Technical Skills, Soft Skills, Personal Project, Team Project, Extra
 Curriculum activities and Contact information */}
         <Route path='/' component={Home} exact={true} />
+        <Route path='/login' component={Login} exact={true} />
+        <Route path='/register' component={Register} exact={true} />
         <Route path='/skills' component={TechSkills} exact={true} />
         {/* <Route path="/softskills" component={SoftSkills} exact={true} />
         <Route path="/projects" component={Projects} exact={true} />
