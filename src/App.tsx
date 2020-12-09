@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
+import Landing from './pages/Landing';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -32,9 +33,10 @@ const App: React.FC = () => (
       <IonRouterOutlet>
         {/* Personal Profile, Technical Skills, Soft Skills, Personal Project, Team Project, Extra
 Curriculum activities and Contact information */}
-        <Route path='/' component={Home} exact={true} />
+        <Route path='/' component={Landing} exact={true} />
         <Route path='/login' component={Login} exact={true} />
         <Route path='/register' component={Register} exact={true} />
+        <Route path='/home' component={Home} exact={true} />
         <Route path='/skills' component={TechSkills} exact={true} />
         {/* <Route path="/softskills" component={SoftSkills} exact={true} />
         <Route path="/projects" component={Projects} exact={true} />

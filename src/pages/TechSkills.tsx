@@ -18,6 +18,7 @@ import css from '../images/css.jpg';
 import js from '../images/js.jpg';
 import react from '../images/react.jpg';
 import ionic from '../images/ionic.jpg';
+import Header from './Header';
 
 const skills = [
   {
@@ -56,6 +57,7 @@ const TechSkills: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className='ion-padding'>
+        <Header />
         <IonList>
           {skills.map((e) => (
             <IonItem>

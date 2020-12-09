@@ -6,6 +6,7 @@ import {
   IonInput,
   IonItem,
   IonLabel,
+  IonLoading,
   IonList,
   IonPage,
   IonText,
@@ -20,14 +21,30 @@ import css from '../images/css.jpg';
 import js from '../images/js.jpg';
 import react from '../images/react.jpg';
 import ionic from '../images/ionic.jpg';
+import { toast } from './toast';
+import { register } from '../serviceWorker';
+import { registerUser } from './firebase';
 
 const Register: React.FC = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  function regUser() {
-    console.log(username, password);
+  async function regUser() {
+    if (password !== confirmPassword) {
+      return toast('Passwords do not match');
+    }
+
+    if (username === '' || password === '') {
+      return toast('Username/Password are required');
+    }
+    setLoading(true);
+    const res = await registerUser(username, password);
+    if (res) {
+      toast('Registration successful!');
+    }
+    setLoading(false);
   }
   return (
     <IonPage>
@@ -35,10 +52,11 @@ const Register: React.FC = () => {
         <IonToolbar>
           <IonTitle>
             {' '}
-            <h1>Login</h1>
+            <h1>Register</h1>
           </IonTitle>
         </IonToolbar>
       </IonHeader>
+      <IonLoading message='Loading...' isOpen={loading} />
       <IonContent>
         <IonInput
           placeholder='username'
