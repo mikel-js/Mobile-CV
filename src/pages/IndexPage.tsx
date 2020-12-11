@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Redirect, Route } from 'react-router-dom';
+// Necessary imports
+import React from 'react';
+import { Route } from 'react-router-dom';
+// Ionic components
 import {
   IonApp,
   IonIcon,
@@ -8,15 +10,10 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  IonContent,
-  IonInput,
-  IonPage,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Landing from './Landing';
+// Routes
 import Home from './Home';
-import Login from './Login';
-import Register from './Register';
 import TechSkills from './TechSkills';
 import Projects from './Projects';
 import ExtraCo from './ExtraCo';
@@ -39,9 +36,6 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 import {
-  ellipse,
-  square,
-  triangle,
   home,
   codeWorkingOutline,
   logoIonic,
@@ -61,6 +55,7 @@ const Index: React.FC = () => {
             <Route path='/activities' component={ExtraCo} exact={true} />
             <Route path='/contact' component={Contacts} exact={true} />
           </IonRouterOutlet>
+          {/* These are the tabs to be shown */}
           <IonTabBar slot='bottom'>
             <IonTabButton tab='Home' href='/home'>
               <IonIcon icon={home} />

@@ -1,24 +1,14 @@
+// My main page, you can log or register here
 import {
-  IonAvatar,
   IonButton,
   IonContent,
   IonHeader,
-  IonItem,
-  IonLabel,
-  IonList,
   IonPage,
-  IonText,
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
 import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
-import html from '../images/html.jpg';
-import css from '../images/css.jpg';
-import js from '../images/js.jpg';
-import react from '../images/react.jpg';
-import ionic from '../images/ionic.jpg';
 
 const Landing: React.FC = () => {
   return (

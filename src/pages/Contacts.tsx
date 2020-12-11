@@ -17,7 +17,7 @@ import {
   locationOutline,
 } from 'ionicons/icons';
 import Logout from './LogoutButton';
-
+// Really simple contacts here
 const Contacts: React.FC = () => {
   return (
     <IonPage>

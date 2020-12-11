@@ -1,35 +1,19 @@
 import {
   IonAvatar,
-  IonButton,
   IonContent,
   IonHeader,
-  IonItem,
-  IonLabel,
-  IonList,
   IonPage,
-  IonText,
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
 import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
+
 import './Home.css';
 import pix from '../images/pix.jpg';
-import { logoutUser } from './firebase';
-import { useHistory } from 'react-router-dom';
-import { toast } from './toast';
 
 import Logout from './LogoutButton';
 
 const Home: React.FC = () => {
-  const history = useHistory();
-  async function logout() {
-    const res = await logoutUser();
-    if (res) {
-      toast('Logout successful!');
-      history.push('/');
-    }
-  }
   return (
     <IonPage>
       <IonHeader>

@@ -6,12 +6,10 @@ import {
   IonLabel,
   IonList,
   IonPage,
-  IonText,
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
 import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 import html from '../images/html.jpg';
 import css from '../images/css.jpg';
@@ -21,6 +19,7 @@ import ionic from '../images/ionic.jpg';
 
 import Logout from './LogoutButton';
 
+// Skills will be mapped below and will have a list type approacg
 const skills = [
   {
     skills: 'HTML',

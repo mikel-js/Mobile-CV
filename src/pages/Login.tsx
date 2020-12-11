@@ -1,33 +1,23 @@
 import {
-  IonAvatar,
   IonButton,
   IonContent,
   IonHeader,
   IonInput,
-  IonItem,
-  IonLabel,
-  IonList,
   IonLoading,
   IonPage,
-  IonText,
   IonTitle,
   IonToolbar,
 } from '@ionic/react';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
-import html from '../images/html.jpg';
-import css from '../images/css.jpg';
-import js from '../images/js.jpg';
-import react from '../images/react.jpg';
-import ionic from '../images/ionic.jpg';
 import { loginUser } from './firebase';
-import { Toast } from '@capacitor/core';
 import { toast } from './toast';
 
+// Loggin in using firebase
 const Login: React.FC = () => {
   const history = useHistory();
+  // these are the react state
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);

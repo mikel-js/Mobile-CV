@@ -1,11 +1,7 @@
 import {
   IonContent,
   IonHeader,
-  IonItem,
-  IonLabel,
-  IonList,
   IonPage,
-  IonText,
   IonTitle,
   IonToolbar,
   IonCard,
@@ -13,12 +9,9 @@ import {
   IonCardSubtitle,
   IonCardTitle,
   IonCardContent,
-  IonIcon,
-  IonButton,
   IonImg,
 } from '@ionic/react';
 import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
 import ionic from '../images/ionic.jpg';
 import portfolio from '../images/portfolio.jpg';
@@ -28,11 +21,12 @@ import guess from '../images/guess.jpg';
 
 import Logout from './LogoutButton';
 
+// Projects will be map below, and will show a pretty awesome lists
 const projects = [
   {
     name: 'Ionic CV',
     desc: 'My online CV app',
-    link: '#',
+    link: 'https://github.com/mikel-js/Mobile-CV',
     pic: ionic,
   },
   {

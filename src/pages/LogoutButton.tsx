@@ -1,9 +1,10 @@
-import { IonButton, IonHeader, IonToolbar } from '@ionic/react';
+import { IonButton } from '@ionic/react';
 import React from 'react';
 import { logoutUser } from './firebase';
 import { useHistory } from 'react-router-dom';
 import { toast } from './toast';
 
+// Just a simple logout function
 const LogoutButton: React.FC = () => {
   const history = useHistory();
   async function logout() {

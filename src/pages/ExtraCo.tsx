@@ -5,22 +5,19 @@ import {
   IonLabel,
   IonList,
   IonPage,
-  IonText,
   IonTitle,
   IonToolbar,
   IonThumbnail,
 } from '@ionic/react';
 import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
 import './Home.css';
-import html from '../images/html.jpg';
 import ball from '../images/ball.jpg';
 import cook from '../images/cook.jpg';
 import comp from '../images/comp.jpg';
 import movie from '../images/movie.jpg';
-
 import Logout from './LogoutButton';
 
+// Activities will be map/loop below
 const activities = [
   {
     name: 'Playing games',
