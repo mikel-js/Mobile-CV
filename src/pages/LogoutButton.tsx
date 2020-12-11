@@ -1,4 +1,4 @@
-import { IonButton, IonFooter, IonToolbar } from '@ionic/react';
+import { IonButton, IonHeader, IonToolbar } from '@ionic/react';
 import React from 'react';
 import { logoutUser } from './firebase';
 import { useHistory } from 'react-router-dom';
@@ -15,13 +15,9 @@ const LogoutButton: React.FC = () => {
   }
   return (
     <>
-      <IonFooter>
-        <IonToolbar>
-          <IonButton className='header__button' onClick={logout}>
-            Logout
-          </IonButton>
-        </IonToolbar>
-      </IonFooter>
+      <IonButton className='header__button' onClick={logout}>
+        Logout
+      </IonButton>
     </>
   );
 };

@@ -39,7 +39,7 @@ const Login: React.FC = () => {
       toast('Login failed, check your credentials');
     } else {
       toast('Login successful!');
-      history.push('/home');
+      history.push('/index');
     }
     setLoading(false);
   }

@@ -18,7 +18,7 @@ import pix from '../images/pix.jpg';
 import { logoutUser } from './firebase';
 import { useHistory } from 'react-router-dom';
 import { toast } from './toast';
-import Header from './Header';
+
 import Logout from './LogoutButton';
 
 const Home: React.FC = () => {
@@ -43,7 +43,6 @@ const Home: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        <Header />
         <IonContent>
           <h2></h2>
           <p>Name: Michael Castro</p>

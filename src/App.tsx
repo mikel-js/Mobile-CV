@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet } from '@ionic/react';
+import {
+  IonApp,
+  IonIcon,
+  IonLabel,
+  IonRouterOutlet,
+  IonTabBar,
+  IonTabButton,
+  IonTabs,
+} from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Landing from './pages/Landing';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import TechSkills from './pages/TechSkills';
+import Projects from './pages/Projects';
+import ExtraCo from './pages/ExtraCo';
+import Contacts from './pages/Contacts';
+import Index from './pages/IndexPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -27,24 +39,32 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        {/* Personal Profile, Technical Skills, Soft Skills, Personal Project, Team Project, Extra
-Curriculum activities and Contact information */}
-        <Route path='/' component={Landing} exact={true} />
-        <Route path='/login' component={Login} exact={true} />
-        <Route path='/register' component={Register} exact={true} />
-        <Route path='/home' component={Home} exact={true} />
-        <Route path='/skills' component={TechSkills} exact={true} />
-        {/* <Route path="/softskills" component={SoftSkills} exact={true} />
-        <Route path="/projects" component={Projects} exact={true} />
-        <Route path="/activities" component={Activies} exact={true} />
-        <Route path="/contact" component={Contact} exact={true} /> */}
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
-);
+import {
+  ellipse,
+  square,
+  triangle,
+  home,
+  codeWorkingOutline,
+  logoIonic,
+  basketball,
+  call,
+} from 'ionicons/icons';
+
+const App: React.FC = () => {
+  const [log, setLog] = useState(false);
+  return (
+    <IonApp>
+      <IonReactRouter>
+        {/* <IonTabs> */}
+        <IonRouterOutlet>
+          <Route path='/' component={Landing} exact={true} />
+          <Route path='/login' component={Login} exact={true} />
+          <Route path='/register' component={Register} exact={true} />
+          <Route path='/index' component={Index} exact={true} />
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+  );
+};
 
 export default App;

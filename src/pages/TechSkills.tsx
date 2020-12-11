@@ -18,7 +18,8 @@ import css from '../images/css.jpg';
 import js from '../images/js.jpg';
 import react from '../images/react.jpg';
 import ionic from '../images/ionic.jpg';
-import Header from './Header';
+
+import Logout from './LogoutButton';
 
 const skills = [
   {
@@ -54,10 +55,10 @@ const TechSkills: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Skills</IonTitle>
+          <Logout />
         </IonToolbar>
       </IonHeader>
       <IonContent className='ion-padding'>
-        <Header />
         <IonList>
           {skills.map((e) => (
             <IonItem>
@@ -72,6 +73,7 @@ const TechSkills: React.FC = () => {
           ))}
         </IonList>
       </IonContent>
+      <Logout />
     </IonPage>
   );
 };
