@@ -1,3 +1,6 @@
+// Michael Castro
+// 1902459
+
 import {
   IonAvatar,
   IonContent,

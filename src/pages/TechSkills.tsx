@@ -1,3 +1,6 @@
+// Michael Castro
+// 1902459
+
 import {
   IonAvatar,
   IonContent,
@@ -54,7 +57,6 @@ const TechSkills: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Skills</IonTitle>
-          <Logout />
         </IonToolbar>
       </IonHeader>
       <IonContent className='ion-padding'>

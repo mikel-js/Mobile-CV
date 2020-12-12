@@ -1,3 +1,6 @@
+// Michael Castro
+// 1902459
+
 import {
   IonContent,
   IonHeader,
@@ -43,7 +46,6 @@ const ExtraCo: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Extra Curriculum activities</IonTitle>
-          <Logout />
         </IonToolbar>
       </IonHeader>
       <IonContent className='ion-padding'>

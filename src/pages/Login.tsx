@@ -1,3 +1,6 @@
+// Michael Castro
+// 1902459
+
 import {
   IonButton,
   IonContent,
@@ -47,7 +50,7 @@ const Login: React.FC = () => {
       <IonLoading message='Loading...' isOpen={loading} />
       <IonContent>
         <IonInput
-          placeholder='username'
+          placeholder='email'
           onIonChange={(e: any) => setUsername(e.target.value)}
         />
         <IonInput

@@ -1,3 +1,5 @@
+// Michael Castro
+// 1902459
 // My main page, you can log or register here
 import {
   IonButton,

@@ -1,3 +1,6 @@
+// Michael Castro
+// 1902459
+
 import {
   IonContent,
   IonHeader,
@@ -61,7 +64,6 @@ const Projects: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Projects</IonTitle>
-          <Logout />
         </IonToolbar>
       </IonHeader>
       <IonContent>
