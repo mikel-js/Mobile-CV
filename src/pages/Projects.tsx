@@ -70,7 +70,7 @@ const Projects: React.FC = () => {
         {projects.map((proj, i) => (
           <IonCard key={i}>
             <IonCardContent>
-              <IonImg src={proj.pic}></IonImg>
+              <IonImg src={proj.pic} className='projectImage'></IonImg>
               <IonCardHeader>
                 <IonCardSubtitle>
                   {' '}
@@ -80,7 +80,6 @@ const Projects: React.FC = () => {
                 </IonCardSubtitle>
                 <IonCardTitle>{proj.name}</IonCardTitle>
               </IonCardHeader>
-
               <IonCardContent>{proj.desc}</IonCardContent>
             </IonCardContent>
           </IonCard>

@@ -9,3 +9,8 @@
 .ion-page {
   background-color: black;
 }
+
+.projectImage img,
+.projectImage {
+  height: 5rem;
+}
