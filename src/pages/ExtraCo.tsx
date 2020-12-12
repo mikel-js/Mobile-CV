@@ -19,6 +19,7 @@ import cook from '../images/cook.jpg';
 import comp from '../images/comp.jpg';
 import movie from '../images/movie.jpg';
 import Logout from './LogoutButton';
+import { act } from 'react-dom/test-utils';
 
 // Activities will be map/loop below
 const activities = [
@@ -53,7 +54,7 @@ const ExtraCo: React.FC = () => {
           {activities.map((activity, i) => (
             <IonItem key={i}>
               <IonThumbnail slot='start'>
-                <img src={activity.img} />
+                <img src={activity.img} alt={act.name} />
               </IonThumbnail>
               <IonLabel>
                 <h2>{activity.name}</h2>

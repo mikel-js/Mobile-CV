@@ -18,7 +18,7 @@ firebase.initializeApp(config)
 // for logging in function
 export async function loginUser(username: string, password: string) {
   try {
-    const res = await firebase.auth().signInWithEmailAndPassword(username, password)
+    await firebase.auth().signInWithEmailAndPassword(username, password)
     return true
   } catch(err) {
     toast(err.message)
@@ -29,7 +29,7 @@ export async function loginUser(username: string, password: string) {
 // for logout function
 export async function logoutUser() {
   try {
-    const res = await firebase.auth().signOut()
+   await firebase.auth().signOut()
     return true
   } catch(err) {
     toast(err.message)

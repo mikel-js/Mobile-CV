@@ -33,6 +33,7 @@ const Login: React.FC = () => {
     } else {
       toast('Login successful!');
       history.push('/index');
+      window.location.reload();
     }
     setLoading(false);
   }

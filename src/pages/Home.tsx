@@ -23,7 +23,7 @@ const Home: React.FC = () => {
         <IonToolbar>
           <IonTitle>
             <IonAvatar>
-              <img src={pix} alt='profile picture' />
+              <img src={pix} alt='profile' />
             </IonAvatar>
             <h1>Personal Profile</h1>
           </IonTitle>
@@ -31,7 +31,6 @@ const Home: React.FC = () => {
       </IonHeader>
       <IonContent>
         <IonContent>
-          <h2></h2>
           <p>Name: Michael Castro</p>
           <p>Occupation: Front end developer, student</p>
           <p>Company/Institution: Vertics Oy, Laurea UAS</p>

@@ -15,6 +15,7 @@ const LogoutButton: React.FC = () => {
     if (res) {
       toast('Logout successful!');
       history.push('/');
+      window.location.reload();
     }
   }
   return (

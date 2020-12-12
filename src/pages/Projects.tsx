@@ -67,8 +67,8 @@ const Projects: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent>
-        {projects.map((proj) => (
-          <IonCard>
+        {projects.map((proj, i) => (
+          <IonCard key={i}>
             <IonCardContent>
               <IonImg src={proj.pic}></IonImg>
               <IonCardHeader>

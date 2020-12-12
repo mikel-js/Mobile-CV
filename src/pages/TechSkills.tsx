@@ -61,8 +61,8 @@ const TechSkills: React.FC = () => {
       </IonHeader>
       <IonContent className='ion-padding'>
         <IonList>
-          {skills.map((e) => (
-            <IonItem>
+          {skills.map((e, i) => (
+            <IonItem key={i}>
               <IonAvatar>
                 <img src={e.img} alt={e.skills} />
               </IonAvatar>
